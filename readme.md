@@ -1,6 +1,10 @@
 # Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling (CVPR'26)
 
-<img src='assets/teaser.png'/>
+
+
+https://github.com/user-attachments/assets/b79ae0ba-1167-4ae6-9739-38841b727b5d
+
+
 
 
 ### [Paper (ArXiv)](https://arxiv.org/abs/2602.xxxx) | [Supplemental Material]()
@@ -10,10 +14,6 @@ This repository will contain the implementation of CVPR paper, Ani3DHuman: Photo
 Qi Sun<sup>1</sup>, Can Wang<sup>1</sup>, Jiaxiang Shang, Wensen Feng, Jing Liao<sup>1</sup>
 
 <sup>1</sup>City University of Hong Kong
-
-
-<video src="assets/supp_video_mask.mp4" controls="controls" width="100%">
-</video>
 
 
 ## 📦 Code Availability

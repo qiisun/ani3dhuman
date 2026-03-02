@@ -7,7 +7,7 @@ https://github.com/user-attachments/assets/b79ae0ba-1167-4ae6-9739-38841b727b5d
 
 
 
-### [Paper (ArXiv)](https://arxiv.org/abs/2602.xxxx) | [Supplemental Material]()
+### [Paper (ArXiv)](https://arxiv.org/abs/2602.19089) | [Supplemental Material]()
 
 This repository will contain the implementation of CVPR paper, Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling.
 

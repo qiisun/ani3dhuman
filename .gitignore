@@ -1,0 +1,10 @@
+*.pt
+*.pth
+*.safetensors
+
+checkpoints/
+*.mp4
+!**/raw_rgb.mp4
+!**/skel.mp4
+!**/rerender_res_14b.mp4
+tmp/

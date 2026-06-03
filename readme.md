@@ -23,7 +23,21 @@ Qi Sun<sup>1</sup>, Can Wang<sup>1</sup>, Jiaxiang Shang, Wensen Feng, Jing Liao
 
 -----
 
-## 🛠️ Environment Setup
+## � Qualitative Results
+
+Comparison between the initial coarse rendering (Mesh-rigged) and our restoration results.
+
+| Case | Coarse Rendering (Input) | Restoration (Ours) |
+| :---: | :---: | :---: |
+| **Dance - ID: g2** | ![](data/dnerf/dance2-g2-supp/mid/raw_rgb.gif) | ![](data/dnerf/dance2-g2-supp/mid/rerender_res_14b.gif) |
+| **Run - ID: g3** | ![](data/dnerf/run-g3-supp/mid/raw_rgb.gif) | ![](data/dnerf/run-g3-supp/mid/rerender_res_14b.gif) |
+| **Walk - ID: g5** | ![](data/dnerf/walk2-g5-supp/mid/raw_rgb.gif) | ![](data/dnerf/walk2-g5-supp/mid/rerender_res_14b.gif) |
+
+> **Note:** To achieve the best performance, we recommend using the **Wan2.2-14B** model.
+
+-----
+
+## �🛠️ Environment Setup
 
 ### 1\. Installation
 

@@ -9,21 +9,100 @@ https://github.com/user-attachments/assets/b79ae0ba-1167-4ae6-9739-38841b727b5d
 
 ### [Paper (ArXiv)](https://arxiv.org/abs/2602.19089) | [Supplemental Material]()
 
-This repository will contain the implementation of CVPR paper, Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling.
+This repository contains the official implementation of our CVPR paper, Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling.
+
+**Ani3DHuman** is a framework for high-fidelity 3D human animation. It leverages a novel **Self-guided Stochastic Sampling** strategy to restore coarse mesh-based renderings into photorealistic videos using video diffusion priors (Wan2.1).
 
 Qi Sun<sup>1</sup>, Can Wang<sup>1</sup>, Jiaxiang Shang, Wensen Feng, Jing Liao<sup>1</sup>
 
 <sup>1</sup>City University of Hong Kong
 
 
-## 📦 Code Availability
-
-Due to internal review requirements, we are unable to release the code publicly at this time. If you need access to the code for research, please contact me (`qisun.new@gmail.com`) directly.
-
-~~We are committed to updating the code to public access as soon as possible.~~
-
 ## :star2: Pipeline
 <img src='assets/pipeline.png'/>
+
+-----
+
+## 🛠️ Environment Setup
+
+### 1\. Installation
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/qiisun/ani3dhuman.git
+cd ani3dhuman
+
+# make sure the torch/torchvision/diffusers/transformers version consistent
+conda env create -f environment.yml
+conda activate sgss
+cd DiffSynth-Studio
+pip install -e .
+cd ..
+```
+
+-----
+
+### 2\. 🏡 Pretrained Model
+
+Please download the necessary pretrained models and place them in the `models/` directory.
+
+#### A. Video Diffusion & Control Models
+
+We provide the pretrained **Wan2.1** (Video Diffusion) and **Wan-Control** weights in our Hugging Face repository.
+
+  * **Repository:** [https://huggingface.co/qsun2001/sgss](https://huggingface.co/qsun2001/sgss)
+  * **Action:** Download the models and place them into the `models/` folder.
+
+You can download them easily using the CLI:
+
+```bash
+# Make sure you are in the project root
+huggingface-cli download qsun2001/sgss --local-dir models
+```
+
+#### B. Grounded-SAM (Segmentation)
+
+We use Grounded-SAM for preserved area masking. Please run the following script to download the checkpoints:
+
+```bash
+cd models/Grounded_SAM_2/checkpoints
+bash download_ckpts.sh
+cd ../../..
+```
+
+#### 📂 Expected Directory Structure
+
+After downloading, your `models/` folder should look like this:
+
+```text
+models/
+├── Wan-AI/
+├── PAI/             
+└── Grounded_SAM_2/
+    └── checkpoints/
+        ├── sam2.1_hiera_large.pt
+        └── ...
+```
+
+-----
+
+## 🚀 Usage
+
+Run the restoration script with specific identity and motion IDs.
+
+```bash
+# Basic usage
+python rerender.py --id g3 --motion walk2
+
+# Optional arguments
+python rerender.py --id g3 --motion run --use_14b
+```
+
+### Core Algorithm
+
+The implementation of our **Self-guided Stochastic Sampling** algorithm can be found in:
+📂 `DiffSynth-Studio/diffsynth/pipelines/wan_video_new.py`
 
 
 ## 📝 Citation

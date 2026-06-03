@@ -20,7 +20,7 @@ Qi Sun<sup>1</sup>, Can Wang<sup>1</sup>, Jiaxiang Shang, Wensen Feng, Jing Liao
 
 Due to internal review requirements, we are unable to release the code publicly at this time. If you need access to the code for research, please contact me (`qisun.new@gmail.com`) directly.
 
-We are committed to updating the code to public access as soon as possible.
+~~We are committed to updating the code to public access as soon as possible.~~
 
 ## :star2: Pipeline
 <img src='assets/pipeline.png'/>
